@@ -1,0 +1,18 @@
+MAIS 202 – Project Deliverable 1
+
+1.	Project and dataset
+The project that II will work on this semester will be to predict a used car price based on its year, model (and make), and mileage. The dataset I chose is from Kaggle and is called: “1.2 Million Used Car Listing”.[1] It has information on the price (USD), the year, the mileage, the city where the car was bought in the US, the State, the vin of the car, the make and the model.
+
+2.	Methodology
+i.	Data Preprocessing
+The most useful information in the dataset for my model are the price, year, mileage, make and model of the cars listed. For my data preprocessing, I will need to make sure there is no line with missing information, and to clean up the model’s names. For instance, some models might appear only once and not give me significant insight on their price and they should be removed from the model. Or, some models name might vary slightly because of different options on the cars without significantly impacting the price. (Ex: Buick EncoreFWD Vs Buick Encore Sport) In those cases, the cars should be considered to be the same model.
+
+ii.	Machine Learning Model
+From the dataset, my goal will be to predict the prices of the used cars. The algorithm I will use will be similar to the one used in assignment 1, but with more parameters. I will do a linear regression for every model in the list, based on their year and mileage. At this stage, I would use a gradient descent algorithm with regularization. The pros of this model is that it is relatively simple to build and should give me accurate results since I have a lot of data points. Unfortunately, this is also a disadvantage, since if I have too many data points, it might take too long to train. That is why I might end up focusing on some make in particular to make my model faster. Since so many cars are listed on my dataset, makes can be treated separately, and that there is a significant number of listing for each model in the list, I have the luxury of omitting some makes and focusing on others.
+
+iii.	Final Conceptualization
+I will present my project with a webapp for the project fair. In the app, the users will be able to select the make and the model and the year of the car from a drop-down menu and to write down the mileage in a text box. Then, the app will output its estimated price. Since I do not have a lot of experience with sophisticated technologies, I will keep the app very simple and I will not be focusing on it too much. 
+
+
+References:
+[1] Payne, E. (2018). 1.2 Million Used Car Listings. [online] Kaggle.com. Available at: https://www.kaggle.com/jpayne/852k-used-car-listings [Accessed 27 Jan. 2020].
