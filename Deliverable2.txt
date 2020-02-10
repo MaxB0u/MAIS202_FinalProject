@@ -1,0 +1,47 @@
+MAIS 202 – Project Deliverable 2
+
+1.	Problem Statement
+The goal of my project is to predict used car prices based on a car’s year, mileage, make and model.  The goal is to be able to 
+get a quick estimate on a car’s price based on these parameters.
+
+2.	Data preprocessing
+I am working with a dataset named “1.2 Million Used Car Listings” from Kaggle that can be found at the following url: 
+https://www.kaggle.com/jpayne/852k-used-car-listings. The dataset is actually separated in two csv files. For this deliverable,
+I am only working with a subset of this dataset since I wanted it to be less than 25MB so I could upload it on GitHub. Therefore, 
+I am working with about 900 samples. To preprocess the data, I eliminate all the features I do not need and create two lists (X and y)
+with the features I am using and predicting respectively. 
+
+3.	Machine Learning Model
+For this deliverable, I decided to use a support vector regression and a random forest regression to predict my data. These 
+models were suggested to me by Diego, and I am still willing to explore other models if necessary, as will be discussed later. 
+These two models seemed easier to tune their hyperparameter using already existing sickit models than to start to write my own
+models from scratch like in assignment 1. Also, I decided to split my data into 80% training and 20% testing since it was a 
+preliminary test. I was only working with a subset of the data and this is not the final product, therefore, I did not want to 
+even further reduce my number of training samples by introducing a validation set. In the final product though, I will make sure 
+to include one. Furthermore, I made sure to shuffle my data before splitting it into training set and testing set in my code since 
+the dataset was ordered by make online and it would have reduced my accuracy if I did not randomize the order of the data. To test 
+my model, I used the fit method on my training set and I then measured the accuracy score and mean squared error using built in 
+functions from sickit. Note that no regularization method was used explicitly in my coed for tis deliverable, but that I might 
+include it in the final product if need be. I will need more investigation to determine the best hyper parameter since I was tuning 
+them randomly at first and had no data to based myself upon. I might end up doing like in assignment 1 and doing graphs with different
+hyperparameter values to find their optimal values for my model. I do not think that my model is underfitting or overfitting, 
+I think it has too many dimensions.
+
+4.	Preliminary Result
+As seen in my code, my preliminary result were pretty bad. Especially the support vector regression seemed to be giving horrible 
+results. The random forest regression was better, but I was still getting very inconsistent accuracy score (between 0.4 and 0.8 
+depending on my attempts). A validation set would have been useful here to better measure my accuracy and get more consistent results.
+Also, I was getting an average error of about $2700 for my training set and $8000 for my testing set which could definitely be better. 
+(I got that by taking the square root of my mean square error) I think the project is still feasible but better preprocessing methods
+and hyperparameter tuning would definitely help performance.
+
+5.	Next Steps
+I do not think that my model was overfitting the data, I think that its dimensionality was too high. In fact, two of my parameters, 
+the make and model, are linked and could be considered redundant. Therefore, I should remove the make as a parameter and only 
+discriminate by model. Also, when preprocessing my data, I could remove models that are only listed a limited number of times 
+(for example less than 20 times) to be sure to only predict on models where I have enough samples to get accurate predictions. 
+I do think that sticking with the random forest regression is a good idea, but a lot of improvements can be done for hyperparameter 
+tuning and preprocessing before the next deliverable. 
+
+
+
