@@ -378,15 +378,15 @@ print(np.mean(test_pourc_e))
 print(np.median(test_pourc_e))
 
 #random forest regression using sickit learning
-for_reg = RandomForestRegressor()
-for_reg.fit(X_train,y_train)
+#for_reg = RandomForestRegressor()
+#for_reg.fit(X_train,y_train)
 
-print(for_reg.score(X_train, y_train))
-print(mean_squared_error(for_reg.predict(X_train),y_train))
+#print(for_reg.score(X_train, y_train))
+#print(mean_squared_error(for_reg.predict(X_train),y_train))
 
-pred_valid = for_reg.predict(X_valid) #use validation set
-print(for_reg.score(X_valid, y_valid))
-print(mean_squared_error(pred_valid,y_valid))
+#pred_valid = for_reg.predict(X_valid) #use validation set
+#print(for_reg.score(X_valid, y_valid))
+#print(mean_squared_error(pred_valid,y_valid))
 
 sums = 0
 for a in data:
