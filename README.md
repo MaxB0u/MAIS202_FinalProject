@@ -1,7 +1,10 @@
 # MAIS202_FinalProject
-Includes all project deliverables for MAIS202 Winter 2020 and the final webapp
+Includes all project deliverables for MAIS202 Winter 2020 and the final webapp.
+
 First, the design process folder contains all the deliverables that I submitted throughout MAIS202. It serves as documentation on my design process.
+
 The Used Car predictor folder contains all the code and trained data to run or repreduce my webapp. 
+
 Here is a short description of the project:
 Evaluating and comparing prices of used cars can be challenging and very time consuming for customers. I built a project that predicts the price of used cars from 38 different brands based on their make, model, year and mileage. The goal of the project is to estimate the price that a customer should expect to pay for a car based on past selling data. This application should not be used by resellers or car dealership since the predicted price are not precise enough to justify buying a car or not. For instance, since my moel does not take into account any options on the cars, it will always predict the same price for a given model (assuming constant year and mileage). This is not true in reality as some options can greatly affect the value of used cars.
 
